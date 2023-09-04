@@ -9,9 +9,9 @@
     tasks_from: app-setup
 
 - name: download dependencies
-    ansible.builtin.command: npm install
-    args:
-      chdir: /app
+  ansible.builtin.command: npm install
+  args:
+    chdir: /app
 
 - name: Load mongodb schema
   ansible.builtin.import_role:
